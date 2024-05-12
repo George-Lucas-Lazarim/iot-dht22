@@ -82,6 +82,7 @@ void configurarDisplay() {
   display.setTextColor(WHITE);
   display.clearDisplay();
 }
+
 // --- PUBLICA (MQTT) TEMPERATURA E UMIDADE ---
 void publicarTemperaturaUmidadeNoTopico() {
   client.publish(topicoTemperatura, String(temperatura).c_str(), true);
@@ -96,7 +97,6 @@ void medirTemperaturaUmidade() {
 }
 
 // --- MOSTRA TEMPERATURA E UMIDADE ---
-
 void mostrarTemperaturaUmidade() {
   mostrarMensagemNoDisplay("Temperatura", temperatura, " C");
   mostrarMensagemNoDisplay("Umidade", umidade, " %");
